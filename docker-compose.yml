@@ -1,0 +1,13 @@
+services:
+  hikvision-web:
+    build: .
+    container_name: hikvision-web
+    restart: always
+    ports:
+      - "3020:3020"
+    networks:
+      - nginx_default
+
+networks:
+  nginx_default:
+    external: true
